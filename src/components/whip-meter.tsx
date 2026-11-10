@@ -1,5 +1,5 @@
 import { HOUSE_SEATS, QUORUM, type Tally } from "@/lib/types"
-import { absent, undecided } from "@/lib/tally"
+import { absent, marginLabel, undecided } from "@/lib/tally"
 
 export function WhipMeter({ tally }: { tally: Tally }) {
   const open = undecided(tally)
@@ -37,7 +37,8 @@ export function WhipMeter({ tally }: { tally: Tally }) {
           </div>
         ))}
       </dl>
-      <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+      <p className="mt-3 text-sm leading-relaxed">{marginLabel(tally)}</p>
+      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
         {tally.present >= QUORUM
           ? `${tally.present} members are present. A quorum is ${QUORUM}. The bill passes only if the ayes outnumber the nays.`
           : `${tally.present} members are present. That is short of a quorum of ${QUORUM}. The House should not be legislating.`}

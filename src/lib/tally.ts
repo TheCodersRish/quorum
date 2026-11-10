@@ -22,6 +22,18 @@ export function absent(tally: Tally): number {
   return HOUSE_SEATS - clampTally(tally).present
 }
 
+export function marginLabel(tally: Tally): string {
+  const safe = clampTally(tally)
+  const gap = safe.aye - safe.nay
+  if (gap > 0) {
+    return `Ahead by ${gap}. The ayes do not need 218. They need one more than the nays.`
+  }
+  if (gap < 0) {
+    return `Behind by ${Math.abs(gap)}. The bill fails unless the ayes finish ahead.`
+  }
+  return "The count is tied. A tie does not pass a bill."
+}
+
 export function applyDelta(tally: Tally, delta: Partial<Tally>): Tally {
   return clampTally({
     aye: tally.aye + (delta.aye ?? 0),

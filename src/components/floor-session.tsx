@@ -324,6 +324,13 @@ function Result({
     <section className="mt-8">
       <p className="max-w-2xl text-lg leading-relaxed">{vote.summary}</p>
       <CountUp vote={vote} />
+      {vote.reason === "majority" || vote.reason === "defeated" ? (
+        <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+          This sitting was the House. In the Senate, ending debate usually takes
+          three-fifths of the senators sworn: 60, when all 100 seats are filled.
+          A House majority does not unlock that door.
+        </p>
+      ) : null}
       <div className="no-print mt-6 flex flex-wrap gap-2">
         <LetterDialog bill={bill} />
         <Button type="button" variant="outline" className="h-10" onClick={() => window.print()}>
