@@ -8,7 +8,9 @@ Quorum is a classroom model of the U.S. House. You staff a member for a day: pic
 
 ## Run it
 
-You need Node.js 22 or newer.
+The live site is [https://quorum-ten-khaki.vercel.app](https://quorum-ten-khaki.vercel.app).
+
+You need Node.js 22 or newer to run it on your own machine.
 
 ```bash
 npm install
@@ -61,7 +63,7 @@ Registration for the 2026 challenge closed on October 26, 2026. Watch [congressi
 
 ## Submitting to Hack Club
 
-Hack Club's certificate for an open-source Congressional App Challenge project is described at [capitol.hackclub.com/certificate](https://capitol.hackclub.com/certificate). The published deadline for the last round was October 26, 2026. If a form is open, send the public repository, the playable link, and the Hackatime project name `quorum`. Questions go to capitol@hackclub.com.
+Hack Club's certificate for an open-source Congressional App Challenge project is described at [capitol.hackclub.com/certificate](https://capitol.hackclub.com/certificate). The published deadline for the last round was October 26, 2026. If a form is open, send the public repository, the playable link [https://quorum-ten-khaki.vercel.app](https://quorum-ten-khaki.vercel.app), and the Hackatime project name `quorum`. Questions go to capitol@hackclub.com.
 
 The repository a reviewer can certify has the source, this README, a screenshot, and the MIT license. It does not contain API keys.
 
